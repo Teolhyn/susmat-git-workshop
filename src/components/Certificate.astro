@@ -14,8 +14,8 @@ const { title, date_of_event } = Astro.props as CertificateProps;
 
 <div id="container">
 	<img id="background" src={background.src} alt="" fetchpriority="high" />
-<div id="container" class="flex flex-col items-center font-montserrat">
-  <h1 class="text-4xl">{title}</h1>
+<div id="container" class="flex flex-col items-center font-montserrat tracking-tight">
+  <h1 class="text-4xl font-semibold tracking-wider">{title}</h1>
   <h2 class="text-sm">{date_of_event.toLocaleDateString("en-US", { month: "short", day: "2-digit", year: "numeric",})}</h2>
   <h3 class="mt-20 text-2xl mb-5">Participants:</h3>
   <slot />
